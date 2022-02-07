@@ -14,26 +14,35 @@ import types
 
 
 class Insert_SQL:
-    def __init__(self, filename):
-        with open(filename) as fh:
+    def __init__(self, filename, output):
+        output = open(output, "w")
+        with open(filename, 'r') as fh:
             for line in fh:
                 # read line by line from log file
                 # description = list(line.strip().split(None, 8))
+                # output.write(line)
 
                 # print(description)
                 if '.' in line:
-                    if not re.search('\d+', line):
-                        print('a')
-                    else:  
-                        number = re.search('\d*\.\d{2}', line)  
-                        print(number)
+                    if re.search('\d*\.\d{2}', line):
+                        number = re.search('\d*\.\d{2}', line).group(0)
+                        # print(type(number))
+                        price_before = float(number)
+                        price_after = price_before * 140/100
+                        # print(price_before)
+                        # print(price_after)
+                        price_after_string = str(price_after)
+                        line = re.sub("\d*\.\d{2}" , price_after_string, line)
+                        output.write(line)
+                    else:
+                        output.write(line)
+                else:
+                    output.write(line)
 
 
 try:
-    # * means all if need specific format then *.csv
-    list_of_files = glob.glob(
-        'C:/Users/rajan/Desktop/SI_obj/Continental_VONE/input/*')
+    output = 'D:/empayarco/printing/output.html'
     filename = 'D:/empayarco/printing/test.html'
-    Insert_SQL(filename)
+    Insert_SQL(filename, output)
 except ValueError:
     pass
