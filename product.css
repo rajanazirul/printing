@@ -1,29 +1,69 @@
 @charset "utf-8";
 /*左边区域宽度*/
+/*整體樣式*/
+* { margin:0; padding:0;}
+/*整體背景、文字设置*/
+
+body{ font-size:12px; margin:0px; padding:0px; font-family:tahoma,sans-serif; background:#dcdfe2;}
+div,td,ul,li{ line-height:150%;padding:0px;margin:0px;text-decoration:none;word-wrap:break-word;list-style:none;}
+p{ padding:0px;margin:0px auto;text-decoration:none;word-break:normal;}
+table{ border-collapse:collapse;}
+h1,h2,h3,h4,h5,h6{ font-weight:400; margin:0px; padding:0px; line-height:150%; text-decoration:none;}
+img,fidldset{border:none;}﻿
+textarea{ border:1px solid #ffffff;}
+a{ cursor:pointer;}
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {color:#FF0000; text-decoration: none;}
+.cboth{ clear:both; height:0px; font-size:0px;}
+/*中间白色背景*/
+.wrap{ margin:0 auto; width:985px; background:#FFFFFF; padding-left:9px; }
+
 #main {
 	
 	}
+
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+	  'header header header header header header'
+	  'menu main main main right right'
+	  'menu footer footer footer footer footer';
+	grid-gap: 10px;
+	background-color: rgb(0, 0, 0);
+	padding: 10px;
+  }
+  
+.grid-container > div {
+background-color: rgb(255, 255, 255);
+text-align: center;
+padding: 20px 0;
+}
+
 .leftbar { width:206px; float: left; 
 } 
 
+ul {
+    list-style-type: none;
+}
 
-/*產品列表樣式*/
 #productList {
 	width: 206px;
 	float:left;
 	}
-/*"產品列表"四个字样式*/	
 #productList h2 {
 	width:181px;
 	height:29px;
-	background:url(../images/index_07.jpg) no-repeat;
+	background-color: #000000;
 	font-size:12px;
 	color:#fff;
 	line-height:29px;
 	font-weight:bold;
 	padding-left:25px;
 	}
-/*產品一級分類样式*/	
 #productList h3 {
 	width: 189px;
 	font-size:12px;
@@ -31,9 +71,9 @@
 	line-height:23px;
 	font-weight:bold;
 	padding-left:15px;
-	border-bottom:1px solid #00a3e7;
+	border-bottom:1px solid #FF0000;
 	}
-/*產品列表外框*/
+/*#FF0000  #00a3e7*/
 #productList ul {
 	border:1px solid #0ab9e0;
 	width:204px;
@@ -97,13 +137,13 @@
 	}
 /*產品列表中三級分類超鏈接樣式*/	
 #productList ul ul a:link{
-	color:#0289d0;
+	color:#FF0000;
 	}
 #productList ul ul a:visited{
-	color:#0289d0;
+	color:#FF0000;
 	}
 #productList ul ul a:hover{
-	color:#0289d0;
+	color:#FF0000;
 	background:#cdeeee;
 	}
 /*產品列表中三級分類大小、位置、背景、外框設置*/	
@@ -138,7 +178,7 @@
 	}
 /*產品列表中三級頂部色條設置*/	
 #productList .first-child {
-	background: url(../images/index_39.jpg) repeat-x;
+	background: url(https://www.e-print.my/csstemplate/9/images/index_39.jpg) repeat-x;
 	border:0;
 	padding-top:5px;
 	}	
@@ -154,7 +194,7 @@
 .leftTell h2 {
 	width: 181px;
 	height: 29px;
-	background: url(../images/index_07.jpg) no-repeat;
+	background: url(https://www.e-print.my/csstemplate/9/images/index_07.jpg) no-repeat;
 	font-size: 12px;
 	color: #fff;
 	line-height: 29px;
@@ -194,14 +234,14 @@
 /* 內頁右邊內容寬度樣式 */
 
 #product {
-	float: right;
+	float: center;
 	width: 764px;
 	
 }
 
 /* 路徑樣式 */
 #product h2 {
-	background-image: url(../images/product_07.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_07.gif);
 	background-repeat: repeat-x;
 	background-position: 0px 30px;
 	height: 45px;
@@ -213,7 +253,7 @@
 
 /* 新聞路徑樣式 */
 #producth2 {
-	background-image: url(../images/product_07.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_07.gif);
 	background-repeat: repeat-x;
 	background-position: 0px 30px;
 	margin:0px 0px 0px 5px;
@@ -228,7 +268,7 @@
 #product h1 {
 	width: 726px;
 	height: 49px;
-	background-image: url(../images/producttitle.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/producttitle.gif);
 	background-repeat: no-repeat;
 	margin-top: 15px;
 	padding-left: 30px;
@@ -261,7 +301,7 @@
 	line-height: 24px;
 	font-weight: bold;
 	color: #e15464;
-	background-image: url(../images/product_22.jpg);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_22.jpg);
 	background-repeat: no-repeat;
 	width: 650px;
 	padding-left: 38px;
@@ -273,7 +313,7 @@
 #product .ProTop {
 	width: 756px;
 	height: 49px;
-	background-image: url(../images/product_16.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_16.gif);
 	background-position: 0px 35px;
 	background-repeat: no-repeat;
 	margin-top: 15px;
@@ -285,7 +325,7 @@
 }
 
 #product .ProTop .left {
-	background: url(../images/product_11.jpg) no-repeat left top;
+	background: url(https://www.e-print.my/csstemplate/9/images/product_11.jpg) no-repeat left top;
 	height: 35px;
 	width: 32px;
 }
@@ -296,7 +336,7 @@
 }
 
 #product .ProTop .center {
-	background-image: url(../images/product_13.jpg);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_13.jpg);
 	height: 35px;
 	width: auto;
 	font-size: 12px;
@@ -305,7 +345,7 @@
 }
 
 #product .ProTop .center1 {
-	background-image: url(../images/product_13.jpg);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_13.jpg);
 	height: 35px;
 	width: auto;
 	font-size: 12px;
@@ -316,7 +356,7 @@
 	font-weight: 100;
 }
 #product .ProTop .right {
-	background-image: url(../images/product_14.jpg);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_14.jpg);
 	background-repeat: no-repeat;
 	height: 35px;
 	width: 11px;
@@ -332,7 +372,7 @@
 	font-size: 12px;
 	line-height: 20px;
 	color: #505050;
-	background-image: url(../images/product_18.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_18.gif);
 	background-repeat: repeat-y;
 	width: 716px;
 	padding: 0px 20px;
@@ -364,7 +404,7 @@
 
 /* 内容区底部曲线樣式 */
 #product .proBottom {
-	background-image: url(../images/product_19.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_19.gif);
 	background-repeat: no-repeat;
 	height: 16px;
 	width: 756px;
@@ -408,7 +448,7 @@
 
 /* 表格内彩色加粗文字样式 */
 #product .tablePrice strong {
-	color: #166fb7;
+	color: #000000;
 }
 
 /* 表格内彩色文字样式 */
@@ -456,16 +496,16 @@
 	}
  .tablePrice .downloadai {
 	padding-left:22px;
-	background: url(../images/ai.gif) no-repeat;
+	background: url(https://www.e-print.my/csstemplate/9/images/ai.gif) no-repeat;
 	}
  .tablePrice .downloadcdr {
 	padding-left:22px;
-	background: url(../images/coreldraw.gif) no-repeat;
+	background: url(https://www.e-print.my/csstemplate/9/images/coreldraw.gif) no-repeat;
 	}
  .tablePrice .downloadother {
 
 	padding-left:28px;
-	background: url(../images/eps.gif) 0 5px no-repeat;
+	background: url(https://www.e-print.my/csstemplate/9/images/eps.gif) 0 5px no-repeat;
 	}
  .tablePrice .downloadInfo {
 	text-align:left;
@@ -483,19 +523,19 @@
 	height: 28px;
 	border-bottom-width: 4px;
 	border-bottom-style: solid;
-	border-bottom-color: #049ad5;
+	border-bottom-color: #000000;
 }
 
 /* 标签未选中时*/
 .menu0 li {display: block;float: left;width: auto !important;min-width:55px;height: 27px;padding:0 15px;text-align: center;cursor: pointer;
-	/*! background-image: url(../images/button2.gif); */line-height: 28px;font-size: 12px;font-weight: bold;background-color: #d8e4f4;
+	/*! background-image: url(https://www.e-print.my/csstemplate/9/images/button2.gif); */line-height: 28px;font-size: 12px;font-weight: bold;background-color: #d8e4f4;
 	border:1px solid #98b9e6;border-bottom:none;border-top-left-radius:5px;border-top-right-radius:5px;
 	background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#b5cff1));
 	background: -moz-linear-gradient(top, #f6f6f6, #b5cff1);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#b5cff1');}
 
 /* 标签已选中时*/
 .menu0 li.hover {
-	/*background-image: url(../images/button1.gif);*/
+	/*background-image: url(https://www.e-print.my/csstemplate/9/images/button1.gif);*/
 	height: 30px;
 	color: #FFFFFF;
 	line-height: 28px;
@@ -505,8 +545,8 @@
 	border:1px solid #016ab2;
 	border-top-left-radius:5px;
     border-top-right-radius:5px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#008deb), to(#016fba));
-	background: -moz-linear-gradient(top, #008deb, #016fba);
+	background: -webkit-gradient(linear, left top, left bottom, from(#1d1e1f), to(#000000));
+	background: -moz-linear-gradient(top, #000000, #131414);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008deb', endColorstr='#016fba');
 }
 
@@ -537,14 +577,14 @@
 	height: 28px;
 	text-align: center;
 	cursor: pointer;
-	background-image: url(../images/button2.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button2.gif);
 	line-height: 28px;
 	font-size: 12px;
 	font-weight: bold;
 }
 
 .menu1 li.hover {
-	background-image: url(../images/button1.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button1.gif);
 	height: 28px;
 	width: 117px;
 	color: #FFFFFF;
@@ -572,14 +612,14 @@
 	height: 28px;
 	text-align: center;
 	cursor: pointer;
-	background-image: url(../images/button2.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button2.gif);
 	line-height: 28px;
 	font-size: 12px;
 	font-weight: bold;
 }
 
 .menu2 li.hover {
-	background-image: url(../images/button1.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button1.gif);
 	height: 28px;
 	width: 117px;
 	color: #FFFFFF;
@@ -607,14 +647,14 @@
 	height: 28px;
 	text-align: center;
 	cursor: pointer;
-	background-image: url(../images/button2.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button2.gif);
 	line-height: 28px;
 	font-size: 12px;
 	font-weight: bold;
 }
 
 .menu3 li.hover {
-	background-image: url(../images/button1.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button1.gif);
 	height: 28px;
 	width: 117px;
 	color: #FFFFFF;
@@ -642,14 +682,14 @@
 	height: 28px;
 	text-align: center;
 	cursor: pointer;
-	background-image: url(../images/button2.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button2.gif);
 	line-height: 28px;
 	font-size: 12px;
 	font-weight: bold;
 }
 
 .menu4 li.hover {
-	background-image: url(../images/button1.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button1.gif);
 	height: 28px;
 	width: 117px;
 	color: #FFFFFF;
@@ -677,14 +717,14 @@
 	height: 28px;
 	text-align: center;
 	cursor: pointer;
-	background-image: url(../images/button2.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button2.gif);
 	line-height: 28px;
 	font-size: 12px;
 	font-weight: bold;
 }
 
 .menu5 li.hover {
-	background-image: url(../images/button1.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button1.gif);
 	height: 28px;
 	width: 117px;
 	color: #FFFFFF;
@@ -712,14 +752,14 @@
 	height: 28px;
 	text-align: center;
 	cursor: pointer;
-	background-image: url(../images/button2.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button2.gif);
 	line-height: 28px;
 	font-size: 12px;
 	font-weight: bold;
 }
 
 .menu6 li.hover {
-	background-image: url(../images/button1.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button1.gif);
 	height: 28px;
 	width: 117px;
 	color: #FFFFFF;
@@ -747,14 +787,14 @@
 	height: 28px;
 	text-align: center;
 	cursor: pointer;
-	background-image: url(../images/button2.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button2.gif);
 	line-height: 28px;
 	font-size: 12px;
 	font-weight: bold;
 }
 
 .menu7 li.hover {
-	background-image: url(../images/button1.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/button1.gif);
 	height: 28px;
 	width: 117px;
 	color: #FFFFFF;
@@ -983,7 +1023,7 @@
 
 /* 打稿收費表頂部標題背景設置*/
 #priceDiv .tablePrice4 .tdtopbg {
-	background-image: url(../images/about_5.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/about_5.gif);
 	background-repeat: repeat;
 	height: 36px;
 	width: 734px;
@@ -996,7 +1036,7 @@
 
 /* 打稿收費表中部內容背景設置*/
 #priceDiv .tablePrice4 .tdcenterbg {
-	background-image: url(../images/about_6.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/about_6.gif);
 	background-repeat: repeat-y;
 	width: 694px;
 	padding: 0 20px;
@@ -1004,7 +1044,7 @@
 
 /* 打稿收費表底部曲綫設置*/
 #priceDiv .tablePrice4 .tdbottombg {
-	background-image: url(../images/about_4.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/about_4.gif);
 	background-repeat: no-repeat;
 	height: 21px;
 	width: 734px;
@@ -1064,7 +1104,7 @@
 
 /* 页面標題樣式 */
 #other h2 {
-	background-image: url(../images/product_07.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_07.gif);
 	background-repeat: repeat-x;
 	background-position: 0px 26px;
 	height: 30px;
@@ -1075,7 +1115,7 @@
 }
 
 #otherh2 {
-	background-image: url(../images/product_07.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_07.gif);
 	background-repeat: repeat-x;
 	background-position: 0px 30px;
 	height: 45px;
@@ -1103,7 +1143,7 @@
 #other h5 {
 	font-size: 12px;
 	line-height: 24px;
-	background-image: url(../images/xd_01.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/xd_01.gif);
 	background-repeat: no-repeat;
 	background-position: 0px 6px;
 	padding-left: 15px;
@@ -1115,7 +1155,7 @@
 	line-height: 24px;
 	font-weight: bold;
 	color: #e15464;
-	background-image: url(../images/product_22.jpg);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_22.jpg);
 	background-repeat: no-repeat;
 	width: 650px;
 	padding-left: 38px;
@@ -1127,7 +1167,7 @@
 #other .ProTop {
 	width: 975px;
 	height: 49px;
-	background-image: url(../images/product_161.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_161.gif);
 	background-position: 0px 35px;
 	background-repeat: no-repeat;
 
@@ -1143,13 +1183,13 @@
 }
 
 #other .ProTop .left {
-	background: url(../images/product_11.jpg) no-repeat left top;
+	background: url(https://www.e-print.my/csstemplate/9/images/product_11.jpg) no-repeat left top;
 	height: 35px;
 	width: 32px;
 }
 
 #other .ProTop .center {
-	background-image: url(../images/product_13.jpg);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_13.jpg);
 	height: 35px;
 	width: auto;
 	font-size: 12px;
@@ -1158,7 +1198,7 @@
 }
 
 #other .ProTop .right {
-	background-image: url(../images/product_14.jpg);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_14.jpg);
 	background-repeat: no-repeat;
 	height: 35px;
 	width: 11px;
@@ -1169,7 +1209,7 @@
 	font-size: 12px;
 	line-height: 20px;
 	color: #505050;
-	background-image: url(../images/product_181.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_181.gif);
 	background-repeat: repeat-y;
 	width: 905px;
 	padding: 0px 35px;
@@ -1196,7 +1236,7 @@
 
 /* 页面內容區底部弧形樣式 */
 #other .proBottom {
-	background-image: url(../images/product_191.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_191.gif);
 	background-repeat: no-repeat;
 	height: 16px;
 	width: 975px;
@@ -1291,7 +1331,7 @@
 
 /*新聞內容路徑*/
 #aboutUs1 h1 {
-	background-image: url(../images/product_07.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_07.gif);
 	background-repeat: repeat-x;
 	background-position: 0px 30px;
 	height: 45px;
@@ -1305,7 +1345,7 @@
 #aboutUs1 .ProTop {
 	width: 756px;
 	height: 49px;
-	background-image: url(../images/product_16.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_16.gif);
 	background-position: 0px 35px;
 	background-repeat: no-repeat;
 	margin-top: 5px;
@@ -1322,13 +1362,13 @@
 }
 
 #aboutUs1 .ProTop .left {
-	background: url(../images/product_11.jpg) no-repeat left top;
+	background: url(https://www.e-print.my/csstemplate/9/images/product_11.jpg) no-repeat left top;
 	height: 35px;
 	width: 32px;
 }
 
 #aboutUs1 .ProTop .center1 {
-	background-image: url(../images/product_13.jpg);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_13.jpg);
 	height: 35px;
 	width: auto;
 	font-size: 12px;
@@ -1337,7 +1377,7 @@
 }
 
 #aboutUs1 .ProTop .right {
-	background-image: url(../images/product_14.jpg);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_14.jpg);
 	background-repeat: no-repeat;
 	height: 35px;
 	width: 11px;
@@ -1348,7 +1388,7 @@
 	font-size: 12px;
 	line-height: 20px;
 	color: #505050;
-	background-image: url(../images/product_18.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_18.gif);
 	background-repeat: repeat-y;
 	width: 716px;
 	padding: 0px 20px;
@@ -1357,7 +1397,7 @@
 
 /*新聞內容底部弧形邊框*/
 #aboutUs1 .proBottom {
-	background-image: url(../images/product_19.gif);
+	background-image: url(https://www.e-print.my/csstemplate/9/images/product_19.gif);
 	background-repeat: no-repeat;
 	height: 16px;
 	width: 756px;
@@ -1505,7 +1545,7 @@ em {
 	  float: left;
 	  margin: 0 15px 0 0;
 	  text-decoration: none;
-	  background: url(../images/mao20170222.png)no-repeat 0 0px;
+	  background: url(https://www.e-print.my/csstemplate/9/images/mao20170222.png)no-repeat 0 0px;
 	  
 	}
 
