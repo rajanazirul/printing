@@ -15,15 +15,17 @@ import types
 
 class Insert_SQL:
     def __init__(self, filename, output):
-        output = open(output, "w")
-        with open(filename, 'r') as fh:
+        output = open(output, "w", encoding='UTF8')
+        with open(filename, 'r', encoding='UTF8') as fh:
             for line in fh:
                 # read line by line from log file
                 # description = list(line.strip().split(None, 8))
-                # output.write(line)
-
                 # print(description)
-                if '.' in line:
+                if 'src="' in line:
+                    new = re.sub('src="', 'src="https://www.e-print.my/', line)
+                    output.write(new)
+                    
+                elif '.' in line:
                     if re.search('\d*\.\d{2}', line):
                         number = re.search('\d*\.\d{2}', line).group(0)
                         # print(type(number))
@@ -36,13 +38,14 @@ class Insert_SQL:
                         output.write(line)
                     else:
                         output.write(line)
+                
                 else:
                     output.write(line)
 
 
-try:
-    output = 'D:/empayarco/printing/output.html'
-    filename = 'D:/empayarco/printing/test.html'
-    Insert_SQL(filename, output)
-except ValueError:
-    pass
+# try:
+output = 'D:/empayarco/printing/output.html'
+filename = 'D:/empayarco/printing/test.html'
+Insert_SQL(filename, output)
+# except ValueError:
+#     pass
