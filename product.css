@@ -4,34 +4,24 @@
 * { margin:0; padding:0;}
 /*整體背景、文字设置*/
 
-body{ font-size:12px; margin:0px; padding:0px; font-family:tahoma,sans-serif; background:#dcdfe2;}
-div,td,ul,li{ line-height:150%;padding:0px;margin:0px;text-decoration:none;word-wrap:break-word;list-style:none;}
-p{ padding:0px;margin:0px auto;text-decoration:none;word-break:normal;}
-table{ border-collapse:collapse;}
-h1,h2,h3,h4,h5,h6{ font-weight:400; margin:0px; padding:0px; line-height:150%; text-decoration:none;}
-img,fidldset{border:none;}﻿
-textarea{ border:1px solid #ffffff;}
-a{ cursor:pointer;}
-a:link {text-decoration: none;}
-a:visited {text-decoration: none;}
-a:hover {color:#FF0000; text-decoration: none;}
-.cboth{ clear:both; height:0px; font-size:0px;}
-/*中间白色背景*/
-.wrap{ margin:0 auto; width:985px; background:#FFFFFF; padding-left:9px; }
+
 
 #main {
 	
 	}
 
-.item2 { grid-area: menu; }
+.item2 { 
+	grid-area: menu;
+	font-size:12px; margin:0px; padding:0px; font-family:tahoma,sans-serif; background:#dcdfe2;
+}
+
 .item3 { grid-area: main; }
 
 .grid-container {
 	display: grid;
 	grid-template-areas:
 	  'header header header header header header'
-	  'menu main main main right right'
-	  'menu footer footer footer footer footer';
+	  'left left menu main main right ';
 	grid-gap: 10px;
 	background-color: rgb(0, 0, 0);
 	padding: 10px;
@@ -51,11 +41,11 @@ ul {
 }
 
 #productList {
-	width: 206px;
+	/* width: 206px; */
 	float:left;
 	}
 #productList h2 {
-	width:181px;
+	width:auto;
 	height:29px;
 	background-color: #000000;
 	font-size:12px;
